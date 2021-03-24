@@ -28,6 +28,15 @@
   color: #61dafb;
 }
 
+.iconPicture{
+  height: 200px;
+  width: 250px;
+}
+
+.inlineJumbotron{
+  display: inline-block; /*Makes the divs with className="inlineJumbotron" be arranged in a horizontal line*/
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
