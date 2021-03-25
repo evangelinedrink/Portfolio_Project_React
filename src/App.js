@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import React, {Component} from "react";
-import {Jumbotron, NavBar, Button, Container, Card, CardText, CardBody} from "reactstrap";
+import {Jumbotron, NavBar, NavbarBrand, NavBarToggler, Collapse, Nav, NavItem, Button, Container, Card, CardText, CardBody} from "reactstrap";
 import Icon from "./iconPic.jpg";
 import './App.css';
 
@@ -18,12 +18,29 @@ class App extends Component {
             <div className="inlineJumbotron">
             <Card>
               <CardBody>
-                <CardText>Window displaying new email messages.</CardText>
+                <CardText>Window displaying new email messages.
+                  <p>Include the link for the weather app.</p>
+                </CardText>
               </CardBody>
             </Card>
             </div>
+
+            <div className="inlineJumbotron">
+              <Button color="secondary" block>Settings and Log Off</Button>
+              <Button color="secondary" block>Emails</Button>
+            </div>
+
           </Container>
         </Jumbotron>
+
+        <Container>
+              <Button color="secondary" block>Attendance Page</Button>
+              <Button color="dark" block>Grades</Button>
+              <Button color="secondary" block>Assignments and Tests</Button>
+              <Button color="dark" block>Announcements</Button>
+              <Button color="secondary" block>Contact Parents and/or Students</Button>
+              <Button color="dark" block>Notes and Contact Logs</Button>
+        </Container>
       </div>
     );
   }
