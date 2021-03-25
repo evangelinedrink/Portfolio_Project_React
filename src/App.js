@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import React, {Component} from "react";
-import {Jumbotron, NavBar, NavbarBrand, NavBarToggler, Collapse, Nav, NavItem, Button, Container, Card, CardText, CardBody} from "reactstrap";
+import {Jumbotron, Navbar, NavbarBrand, NavBarToggler, Collapse, NavLink, Nav, NavItem, Button, Container, Card, CardText, CardBody} from "reactstrap";
 import Icon from "./iconPic.jpg";
 import './App.css';
 
@@ -10,12 +10,12 @@ class App extends Component {
       <div>
         <Jumbotron fluid>
           <Container fluid>
-            <div className="inlineJumbotron">
+            <div className="inlineJumbotron col-2">
             {/*Icon Image*/}
             <img src={Icon} className="iconPicture" alt="Colored pencils arranged in a circle."/>
             </div>
 
-            <div className="inlineJumbotron">
+            <div className="inlineJumbotron col-8">
             <Card>
               <CardBody>
                 <CardText>Window displaying new email messages.
@@ -25,7 +25,7 @@ class App extends Component {
             </Card>
             </div>
 
-            <div className="inlineJumbotron">
+            <div className="inlineJumbotron col-2">
               <Button color="secondary" block>Settings and Log Off</Button>
               <Button color="secondary" block>Emails</Button>
             </div>
@@ -33,13 +33,46 @@ class App extends Component {
           </Container>
         </Jumbotron>
 
-        <Container>
-              <Button color="secondary" block>Attendance Page</Button>
+        <Container className="ml-1">
+          <Navbar color="light" className="col-3">
+            <Nav className="mr-auto" className="bg-light" navbar>
+              <NavItem>
+                <NavLink href="/attendance">Attendance Page</NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/grades">Grades</NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/assignments">Assignments and Tests</NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/announcements">Announcements</NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="/email">Contact Parents and/or Students</NavLink>
+              </NavItem>
+            
+              <NavItem>
+                <NavLink href="/notes">Notes and Contact Logs</NavLink>
+              </NavItem>
+            </Nav>
+
+          </Navbar>
+
+            {/*<NavbarBrand href="/attendance">Attendance Page</NavbarBrand>
+            <NavbarToggler onClick={toggle}/>
+            <Collapse isOpen={isOpen} navbar></Collapse>
+    </Navbar>*/}
+              {/*<Button color="secondary" block>Attendance Page</Button>
               <Button color="dark" block>Grades</Button>
               <Button color="secondary" block>Assignments and Tests</Button>
               <Button color="dark" block>Announcements</Button>
               <Button color="secondary" block>Contact Parents and/or Students</Button>
-              <Button color="dark" block>Notes and Contact Logs</Button>
+    <Button color="dark" block>Notes and Contact Logs</Button>*/}
         </Container>
       </div>
     );
