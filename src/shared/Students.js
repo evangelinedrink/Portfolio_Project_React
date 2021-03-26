@@ -1,3 +1,4 @@
+
 export const STUDENTS = [
     {
         id: 0,
@@ -166,4 +167,7 @@ export const STUDENTS = [
     },
 ];
 
-export default STUDENTS;
+//Sorting the students' last name alphabetically. Used localeCompare() method: https://www.techonthenet.com/js/string_localecompare.php 
+export const StudentsAlphabetical= STUDENTS.sort((lastName1,lastName2) => lastName1.lastName.localeCompare(lastName2.lastName, "en", {"sensitivity":"variant"}));
+export default StudentsAlphabetical;
+//export default STUDENTS;

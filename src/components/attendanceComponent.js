@@ -1,12 +1,13 @@
 import React, {Component} from "react";
 import {Table} from "reactstrap";
 import STUDENTS from "../shared/Students.js"; //Obtaining the student roster array (named STUDENTS) to this file
+import StudentsAlphabetical from "../shared/Students.js" //Obtaining the student roster array (named STUDENTSAlphabetical) to this file
 
 class Attendance extends Component {
     constructor(props) {
         super(props);
         this.state= {
-            students: STUDENTS,
+            students: StudentsAlphabetical,
             list: [
                 {id: "0", option: "Present"},
                 {id: "1", option: "Absent"},
