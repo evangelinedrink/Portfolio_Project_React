@@ -165,3 +165,5 @@ export const STUDENTS = [
         firstName: "Nisha",
     },
 ];
+
+export default STUDENTS;
