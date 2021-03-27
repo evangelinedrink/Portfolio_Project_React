@@ -2,7 +2,7 @@
 import React, {Component} from "react";
 import {Jumbotron, Navbar, NavbarBrand, NavBarToggler, Collapse, NavLink, Nav, NavItem, Button, Container, Card, CardText, CardBody} from "reactstrap";
 import Icon from "../iconPic.jpg";
-
+import ReactCalendar from "../components/HomeComponent.js";
 class NavbarJumbotron extends Component {
     render() {
         return(
@@ -34,9 +34,14 @@ class NavbarJumbotron extends Component {
               </Container>
             </Jumbotron>
     
-            <Container className="ml-1">
-              <Navbar color="light" className="col-3">
+            {/*<Container className="ml-1">*/}
+              <Navbar color="dark" sticky="top" expand="md"> {/*className="col-3" */}
+               <div className="container">
                 <Nav className="mr-auto" className="bg-light" navbar>
+                <NavItem>
+                    <NavLink href="/home">Home Page</NavLink>
+                  </NavItem>
+                  
                   <NavItem>
                     <NavLink href="/attendance">Attendance Page</NavLink>
                   </NavItem>
@@ -60,11 +65,12 @@ class NavbarJumbotron extends Component {
                   <NavItem>
                     <NavLink href="/notes">Notes and Contact Logs</NavLink>
                   </NavItem>
+
                 </Nav>
-    
+                
+                </div>
               </Navbar>
-              
-            </Container>
+            {/*</Container>*/}
           </React.Fragment>
         );
       }

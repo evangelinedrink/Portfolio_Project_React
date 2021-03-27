@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Switch, Route, Redirect, BrowserRouter, withRouter} from "react-router-dom"; //Setups the brains of our router so it knows where to send users when they click on buttons on the website
 import Attendance from "./components/attendanceComponent.js";
 import NavbarJumbotron from "./components/NavbarJumbotronComponent.js"
+import ReactCalendar from "./components/HomeComponent.js"
 import './App.css';
 
 class App extends Component {
@@ -11,13 +12,14 @@ class App extends Component {
       <div>
         <NavbarJumbotron /> {/*Calls the NavbarJumbotron component. Navbar and Jumbotron will be shown on the web page.*/}
         <Switch> {/*This Switch component is like a Switch Statement in JavaScript. The Route components represent Case in the Switch statement. The Redirect component acts as a Default statement in a JavaScript Switch statement.*/}
+          <Route path="/home" component={ReactCalendar}/> {/*When the Attendance tab is clicked, the student roster and drop down menu to take attendance is shown.*/}
           <Route path="/attendance" component={Attendance}/> {/*When the Attendance tab is clicked, the student roster and drop down menu to take attendance is shown.*/}
           <Route path="/grades" />
           <Route path="/assignments"/>
           <Route path="/announcements"/>
           <Route path= "/email"/>
           <Route path="/notes"/>
-          <Redirect path="/home"/> { /*This Redirect component acts as a catch all, sort of like a Default statement in a JavaScript Switch statement.*/ }
+          <Redirect path="/home" component={ReactCalendar}/> { /*This Redirect component acts as a catch all, sort of like a Default statement in a JavaScript Switch statement.*/ }
         </Switch>
       </div>
       </BrowserRouter>

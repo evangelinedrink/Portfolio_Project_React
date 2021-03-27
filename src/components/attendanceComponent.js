@@ -13,7 +13,11 @@ class Attendance extends Component {
                 {id: "1", option: "Absent"},
                 {id:"2", option: "Late"},
             ],
-            value: [" "],
+            value: [
+                {FirstName: " "},
+                {LastName: " "},
+                {Attendance: " "},
+            ],
         };
     }
 

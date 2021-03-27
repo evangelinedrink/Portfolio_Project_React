@@ -1,4 +1,4 @@
-
+//Student last names are listed alphabetically. The code for this is below the STUDENTS array.
 export const STUDENTS = [
     {
         id: 0,
