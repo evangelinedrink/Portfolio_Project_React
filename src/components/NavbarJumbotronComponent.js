@@ -3,6 +3,8 @@ import React, {Component} from "react";
 import {Jumbotron, Navbar, NavbarBrand, NavBarToggler, Collapse, NavLink, Nav, NavItem, Button, Container, Card, CardText, CardBody} from "reactstrap";
 import Icon from "../iconPic.jpg";
 import ReactCalendar from "../components/HomeComponent.js";
+
+//Classes are syntax sugar for functions.
 class NavbarJumbotron extends Component {
     render() {
         return(

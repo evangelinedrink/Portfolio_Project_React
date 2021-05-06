@@ -26,8 +26,9 @@ class Attendance extends Component {
     }
 
     handleSubmit(event) {
-        alert("The attendance for today is the follow: " + this.state.value);
-        event.preventDefault();
+        console.log("The attendance for today is the follow: " + this.state.value);
+        //alert("The attendance for today is the follow: " + this.state.value);
+        //event.preventDefault();
     }
 
     render() {
