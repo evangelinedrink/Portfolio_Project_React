@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import {Jumbotron, Navbar, NavbarBrand, NavBarToggler, Collapse, NavLink, Nav, NavItem, Button, Container, Card, CardText, CardBody} from "reactstrap";
 import Icon from "../iconPic.jpg";
 import ReactCalendar from "../components/HomeComponent.js";
+import Weather from "../components/weatherAppComponent.js"; //Importing the Weather constant
 
 //Classes are syntax sugar for functions.
 class NavbarJumbotron extends Component {
@@ -21,9 +22,11 @@ class NavbarJumbotron extends Component {
                 <div className="inlineJumbotron col-8">
                 <Card>
                   <CardBody>
-                    <CardText>Window displaying new email messages.
+                    <Weather/> {/*Calling the Weather App to be displayed in the Card's Body*/}
+                    
+                    {/*<CardText>Window displaying new email messages.
                       <p>Include the link for the weather app.</p>
-                    </CardText>
+                    </CardText> */}
                   </CardBody>
                 </Card>
                 </div>

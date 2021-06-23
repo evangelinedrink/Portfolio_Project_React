@@ -4,6 +4,7 @@ import Attendance from "./components/attendanceComponent.js";
 import Announcements from "./components/announcementComponent.js";
 import NavbarJumbotron from "./components/NavbarJumbotronComponent.js";
 import ReactCalendar from "./components/HomeComponent.js";
+import Weather from "./components/weatherAppComponent.js"; //Importing the Weather constant
 import './App.css';
 
 class App extends Component {

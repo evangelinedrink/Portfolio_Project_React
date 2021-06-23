@@ -27,9 +27,9 @@ class Attendance extends Component {
             ],
             studentAttendance: {
                 id: " ",
-                FirstName: " ",
-                LastName: " ",
-                Attendance: " ",
+                lastName: " ",
+                firstName: " ",
+                attendance: " ",
             },
         };
     };
