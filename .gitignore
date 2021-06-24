@@ -4,8 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-/.weatherAPIKey
-.weatherAPIKey.js
+bin/weatherAPIKey.js
+
 
 # testing
 /coverage

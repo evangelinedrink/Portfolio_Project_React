@@ -4,7 +4,7 @@ import {Jumbotron, Navbar, NavbarBrand, NavBarToggler, Collapse, NavLink, Nav, N
 import Icon from "../iconPic.jpg";
 import ReactCalendar from "../components/HomeComponent.js";
 import Weather from "../components/weatherAppComponent.js"; //Importing the Weather constant
-import weatherAPIKey from "./weatherAPIKey"; //Importing the Weather API Key
+import weatherAPIKey from "../bin/weatherAPIKey"; //Importing the Weather API Key
 
 
 //Need to make a request (API call) from OpenWeather to get data from the API
