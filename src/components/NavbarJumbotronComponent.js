@@ -6,6 +6,7 @@ import ReactCalendar from "../components/HomeComponent.js";
 import Weather from "../components/weatherAppComponent.js"; //Importing the Weather constant
 import weatherAPIKey from "../bin/weatherAPIKey.js"; //Importing the Weather API Key
 import Form from "./form.component"; //Importing the Form where user will type the name of the city and country. Includes the Get Weather button.
+import cloudsImage from "../Clouds.jpg";
 
 //https://www.robinwieruch.de/react-fetching-data
 //https://medium.com/@joelazarz/using-concurrently-with-json-server-and-your-react-app-3d07487acc50 
@@ -133,12 +134,12 @@ getWeather= async (event) => { //Specifying the event in the parameters because 
                 </div>
     
                 <div className="inlineJumbotron col-8">
-                <Card>
+                <Card style={{backgroundImage: "url("+cloudsImage+")", backgroundSize: "fit"}}> {/*Setting the background image: https://holycoders.com/set-background-image-react-js/ */}
                   <CardTitle>
                     <Form loadweather= {this.getWeather} error={this.state.error}/> {/*Calling the Form Component from form.component.jsx. The event handler loadweather is being specified here. Once the loadweather event handler has been initiated (the user hits the Get Weather button for a city, country), the getWeather function in this App.js file will start running. Error message will show up if there is an error, that is why we speciy it in this line. */}
                   </CardTitle>
 
-                  <CardBody >
+                  <CardBody>
                     <Weather
                     city={this.state.city} 
                     country={this.state.country} 
